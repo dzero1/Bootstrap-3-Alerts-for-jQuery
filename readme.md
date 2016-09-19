@@ -1,6 +1,6 @@
 # How to use Bootstrap 3 Alerts for jQuery
 
-It's a very simple lib plugin using the same naming convetions of the bootstrap 3 alert css classes such as: info, warning, success, danger
+It's a very simple lib plugin using the same naming conventions of the bootstrap 3 alert css classes such as: info, warning, success, danger
 
 Use it like so
 
