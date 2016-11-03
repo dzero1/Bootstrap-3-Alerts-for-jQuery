@@ -18,7 +18,10 @@
             }
 
             if(timeout != null) {
-                $(element).delay(timeout).fadeOut('slow').removeClass("show");
+                $.when($(element).delay(timeout).fadeOut('slow')).done(function() {
+                    $(element).removeAttr("style");
+                    $(element).removeClass("show").addClass("hide");
+                });
             }
             var methods = {
                 success: function() {
