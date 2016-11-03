@@ -4,6 +4,14 @@ It's a very simple lib plugin using the same naming conventions of the bootstrap
 
 Use it like so
 
+```html
+<div id="alert" class="hide alert alert-dismissable">
+    <span class="title"></span>
+    <span class="message"></span>
+    <button type="button" class="close hide" data-dismiss="alert" aria-hidden="true">&times;</button>
+</div>
+```
+
 ```javascript
 $(document).ready(function() {
   $.alert("#alert", 3000, "warning", "You have wont the game.", false).warning();
