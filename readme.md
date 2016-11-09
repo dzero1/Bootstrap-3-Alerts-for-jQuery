@@ -1,10 +1,7 @@
-# How to use Bootstrap 3 Alerts for jQuery
+Need bootstrap alerts for your project? Not an issue, I have you covered. Below you will find documetion on how to use the jQuery Plugin.
 
-Bootstap 4 is supported at this time.
+# How to use Bootstrap 3 and Bootstrap 4 Alerts for jQuery
 
-It's a very simple lib plugin using the same naming conventions of the bootstrap 3 alert css classes such as: info, warning, success, danger
-
-Use it like so
 ```css
 #alert .title {
     font-weight: bold;
