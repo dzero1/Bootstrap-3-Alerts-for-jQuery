@@ -9,7 +9,6 @@ Use it like so
 #alert .title {
     font-weight: bold;
 }
-
 #alert .title:after {
     content: ":"
 }
@@ -34,7 +33,10 @@ margin-right: auto;
 
 ```javascript
 $(document).ready(function() {
-  $.alert("#alert", 3000, "warning", "You have wont the game.", false).warning();
+  $.alert(".alert", 3000, "Have you heard about the new game?", false).info();
+  $.alert(".alert", 3000, "Did you mean to delete the game?", false).warning();
+  $.alert(".alert", 3000, "You won the game, Congrats!", true).success();
+  $.alert(".alert", 3000, "Awe, Snap! You lost the game.", false).danger();
 });
 ```
 
