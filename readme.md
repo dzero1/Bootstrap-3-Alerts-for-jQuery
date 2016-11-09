@@ -1,6 +1,6 @@
 Need bootstrap alerts for your project? Not an issue, I have you covered. Below you will find documetion on how to use the jQuery Plugin.
 
-# How to use Bootstrap 3 and Bootstrap 4 Alerts for jQuery
+# How to use Bootstrap Alerts for jQuery
 
 ```css
 #alert .title {
@@ -42,5 +42,9 @@ selector (id/class), timeout (in seconds), title, message, close button (true/fa
 
 ## Methods 
 .warning(), .info(), .danger(), .success()
+
+## Bootstrap Version Supported
+    - 3
+    - 4
 
 This is a re-write of the original plugin located at https://github.com/ubergeekzone/Bootstrap3Alerts, Please do not use the old repo.
