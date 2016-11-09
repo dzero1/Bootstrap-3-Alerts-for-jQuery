@@ -43,8 +43,8 @@ selector (id/class), timeout (in seconds), title, message, close button (true/fa
 ## Methods 
 .warning(), .info(), .danger(), .success()
 
-## Bootstrap Version Supported
-* 3
-* 4
+##  Version Support
+* Bootstrap 3
+* Bootstrap 4
 
 This is a re-write of the original plugin located at https://github.com/ubergeekzone/Bootstrap3Alerts, Please do not use the old repo.
