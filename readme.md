@@ -3,6 +3,24 @@
 It's a very simple lib plugin using the same naming conventions of the bootstrap 3 alert css classes such as: info, warning, success, danger
 
 Use it like so
+```css
+#alert .title {
+    font-weight: bold;
+}
+
+#alert .title:after {
+    content: ":"
+}
+.alert {
+position: relative;
+top: 0;
+left: 0;
+right:0;
+z-index:10000000;
+margin-left: auto;
+margin-right: auto;
+}
+```
 
 ```html
 <div id="alert" class="hide alert alert-dismissable">
