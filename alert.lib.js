@@ -1,46 +1,40 @@
 (function($) {
         $.alert = function(element, timeout, title, message, close_btn) {
             var self = this;
-            if($(element).hasClass("hide")) {
-                $(element).removeClass("hide");
-                $(element).addClass("show");
-            }
+            var ele = $(element).clone().insertAfter("div.alert:last");
+            ele.removeClass("hide");
             if(title != null) {
-                $(element+" .title").text(title);
+                $(".title", ele).text(title);
             }
-
             if(message != null) {
-                $(element+" .message").text(message);
+                $(".message", ele).text(message);
             }
-
             if(close_btn == true) {
-                $(element+" button").removeClass("hide").addClass("show");
+                $("button", ele).removeClass("hide").addClass("show");
             }
-
             if(timeout != null) {
-                $.when($(element).delay(timeout).fadeOut('slow')).done(function() {
-                    $(element).removeAttr("style");
-                    $(element).removeClass("show").addClass("hide");
+                $.when(ele.delay(timeout).fadeOut('slow')).done(function() {
+                    ele.remove();
+                    $(element).addClass("hide");
                 });
             }
             var methods = {
                 success: function() {
-                    $(element).addClass("alert-success");
+                    ele.addClass("alert-success");
                     return this;
                 },
                 warning: function() {
-                    $(element).addClass("alert-warning");
+                    ele.addClass("alert-warning");
                     return this;
                 },
                 danger: function() {
-                    $(element).addClass("alert-danger");
+                     ele.addClass("alert-danger");
                     return this;
                 },
                 info: function() {
-                    $(element).addClass("alert-info");
+                    ele.addClass("alert-info");
                     return this;
                 }
             };
             return methods;
-        }
-    }(jQuery));
+}(jQuery));
