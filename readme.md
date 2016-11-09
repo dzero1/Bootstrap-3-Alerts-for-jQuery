@@ -40,8 +40,8 @@ $(document).ready(function() {
 });
 ```
 
-## Parameters 
-id/class, seconds for timeout hide, alert title, alert message, show/hide close button = true/false  
+## Parameters
+selector (id/class), timeout (in seconds), title, message, close button (true/false)
 
 ## Methods 
 .warning(), .info(), .danger(), .success()
