@@ -1,7 +1,8 @@
 (function($) {
         $.alert = function(element, timeout, title, message, close_btn) {
-            var self = this;
-            var ele = $(element).clone().insertAfter("div.alert:last");
+            var last_number = parseInt( $('div[id^="alert"]:last').prop("id").match(/\d+/g), 10) || 0;
+            var add = last_number+1;
+            var ele = $(element).clone().prop("id", "alert-"+add).insertAfter("div.alert:last")
             ele.removeClass("hide");
             if(title != null) {
                 $(".title", ele).text(title);
@@ -37,4 +38,5 @@
                 }
             };
             return methods;
+        }
 }(jQuery));
