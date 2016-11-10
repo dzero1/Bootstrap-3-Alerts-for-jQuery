@@ -3,20 +3,20 @@ Need bootstrap alerts for your project? Not an issue, I have you covered. Below 
 # How to use Bootstrap Alerts for jQuery
 
 ```css
-#alert .title {
+.alert .title {
     font-weight: bold;
 }
-#alert .title:after {
+.alert .title:after {
     content: ":"
 }
 .alert {
-position: relative;
-top: 0;
-left: 0;
-right:0;
-z-index:10000000;
-margin-left: auto;
-margin-right: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    right:0;
+    z-index:10000000;
+    margin-left: auto;
+    margin-right: auto;
 }
 ```
 
