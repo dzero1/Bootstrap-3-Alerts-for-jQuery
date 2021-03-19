@@ -1,44 +1,23 @@
-Need bootstrap alerts for your project? Not an issue, I have you covered. Below you will find documetion on how to use the jQuery Plugin.
+This is an forked repository from "https://github.com/ubergeekzone/Bootstrap-3-Alerts-for-jQuery" and updated to use without any HTML code in you document body and update the main method to use this quickly and cleanly.
+
+The initial code credit goes to the original developer Amy Bridges (https://github.com/ubergeekzone).
 
 # How to use Bootstrap Alerts for jQuery
 
-```css
-.alert .title {
-    font-weight: bold;
-}
-.alert .title:after {
-    content: ":"
-}
-.alert {
-    position: relative;
-    top: 0;
-    left: 0;
-    right:0;
-    z-index:10000000;
-    margin-left: auto;
-    margin-right: auto;
-}
-```
-
-```html
-<div id="alert" class="hide alert alert-dismissable">
-    <span class="title"></span>
-    <span class="message"></span>
-    <button type="button" class="close hide" data-dismiss="alert" aria-hidden="true">&times;</button>
-</div>
-```
-
 ```javascript
 $(document).ready(function() {
-  $.alert("#alert", 3000, "Have you heard about the new game?", false).info();
-  $.alert("#alert", 3000, "Did you mean to delete the game?", false).warning();
-  $.alert("#alert", 3000, "You won the game, Congrats!", true).success();
-  $.alert("#alert", 3000, "Awe, Snap! You lost the game.", false).danger();
+  $.alert("Have you heard about the new game?", '', 3000, false).info();
+  $.alert("Did you mean to delete the game?", 3000, false).warning();
+  $.alert("You won the game, Congrats!", 3000, true).success();
+  $.alert("Awe, Snap! You lost the game.", 3000, false).danger();
 });
 ```
 
 ## Parameters
-selector (must be an id, not class), timeout (in seconds), title, message, close button (true/false)
+- {String} title - Message Title. Also can use as simple message
+- {String} message - Message body if this is a complex message
+- {number} timeout - Should fade out by this much milliseconds ?
+- {bool} close_btn - Show or hide close button
 
 ## Methods 
 .warning(), .info(), .danger(), .success()
@@ -46,5 +25,3 @@ selector (must be an id, not class), timeout (in seconds), title, message, close
 ##  Version Support
 * Bootstrap 3
 * Bootstrap 4
-
-This is a re-write of the original plugin located at https://github.com/ubergeekzone/Bootstrap3Alerts, Please do not use the old repo.
